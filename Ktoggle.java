@@ -1,7 +1,7 @@
 import java.util.*;
 
 //SIQ = Samsung interview question
-public class Ktoggle {   
+public class SIQKToggle {   
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
 
@@ -27,6 +27,7 @@ public class Ktoggle {
             for(int j = 0;j<m;j++){
                 temp+=mat[i][j];
             }
+            
             //if map already contains that string increase the freq
             if(map.containsKey(temp)){
                 int oldFreq = map.get(temp);
@@ -39,14 +40,14 @@ public class Ktoggle {
         }
 
         int ans = Integer.MIN_VALUE;
+
         for(Map.Entry<String,Integer>entry:map.entrySet()){
             //counting number of zeros in each row
             int num_zeros = 0;
             for(int i = 0 ;i<entry.getKey().length();i++){
                 if(entry.getKey().charAt(i)=='0')num_zeros++;
             }
-
-            if(num_zeros %k ==0 && num_zeros<=k){
+            if( num_zeros <=k && (k-num_zeros)%2 ==0 ){
                 ans = Math.max(entry.getValue(), ans);
             }
         }
