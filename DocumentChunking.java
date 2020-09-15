@@ -1,5 +1,5 @@
 
-//hacker earth solution for document chunking!
+//hacker rank solution for document chunking!
 //Youtube explanation : https://www.youtube.com/channel/UC2jUUYFTA2byJXqmONRv8aw
 import java.util.ArrayList;
 import java.util.Collections;
